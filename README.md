@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Images/GitHub-Assets/MES_Animated_Logo_640x480.svg" width="360" alt="MES Animated Logo">
+
 </p>
 
 <div dir="rtl" align="right">
@@ -229,7 +229,6 @@ All kinds of contributions are welcome.
 
 This project is licensed under the MIT or Apache-2.0 license, at your option.
 
-
 ---
 
 ## Credits and Documentation
@@ -281,3 +280,5 @@ The animated SVG assets used for MES visual identity are stored in [Images/GitHu
 - [Telegram](https://t.me/Memar_Electronic)
 - [Instagram](https://www.instagram.com/Memar.Electronic)
 - [مشاهده سایر آموزش‌ها](https://github.com/MEMAR-ELECTRONIC-SANAT)
+
+![MES Animated Logo](Images/GitHub-Assets/MES_Animated_Logo_640x480.svg)
