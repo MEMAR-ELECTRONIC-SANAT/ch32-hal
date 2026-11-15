@@ -228,6 +228,29 @@ This project is licensed under the MIT or Apache-2.0 license, at your option.
 
 ---
 
+## Credits and Documentation
+
+**MEMAR ELECTRONIC SANAT (MES)**
+
+*Your partner in designing and building reliable circuits.*
+
+- [Telegram](https://t.me/Memar_Electronic)
+- [Instagram](https://www.instagram.com/Memar.Electronic)
+- [Explore more tutorials and projects](https://github.com/MEMAR-ELECTRONIC-SANAT)
+
+## Images and Reference Diagrams
+
+The animated SVG assets used for MES visual identity are stored in [Images/GitHub-Assets](Images/GitHub-Assets/).
+
+| File | Purpose |
+|---|---|
+| [MES-Hero-Banner.svg](Images/GitHub-Assets/MES-Hero-Banner.svg) | Main README banner |
+| [MES-Divider.svg](Images/GitHub-Assets/MES-Divider.svg) | Section divider |
+| [MES-Section-Header.svg](Images/GitHub-Assets/MES-Section-Header.svg) | Visual section heading |
+| [MES-Project-Card.svg](Images/GitHub-Assets/MES-Project-Card.svg) | Project showcase |
+| [MES-Status-Strip.svg](Images/GitHub-Assets/MES-Status-Strip.svg) | Status and resource strip |
+| [MES-Thank-You-Footer.svg](Images/GitHub-Assets/MES-Thank-You-Footer.svg) | README footer artwork |
+
 ## تصاویر و دیاگرام‌های راهنما
 
 <p align="center"><img src="Images/GitHub-Assets/MES-Section-Header.svg" width="100%" alt="MES Section Header"></p>
