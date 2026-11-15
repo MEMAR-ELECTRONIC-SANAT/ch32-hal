@@ -1,3 +1,80 @@
+<div dir="rtl" align="right">
+
+<p align="center"><img src="Images/GitHub-Assets/MES-Hero-Banner.svg" width="100%" alt="معمار الکترونیک صنعت - MES"></p>
+
+<p align="center"><img src="Images/GitHub-Assets/MES-Divider.svg" width="100%" alt="جداکننده MES"></p>
+
+# کتابخانه HAL برای میکروکنترلرهای ۳۲ بیتی WCH | ch32-hal
+
+## معرفی
+
+مخزن **ch32-hal** یک کتابخانه **Hardware Abstraction Layer (HAL)** مبتنی بر زبان **Rust** برای میکروکنترلرهای ۳۲ بیتی **RISC-V** شرکت **WCH** است. این HAL با چارچوب ناهمگام [Embassy](https://github.com/embassy-rs/embassy) یکپارچه شده و دسترسی یکپارچه‌ای به واحدهای جانبی خانواده‌های مختلف CH32 ارائه می‌کند.
+
+این پروژه از روش **metapac** برای پشتیبانی چندین تراشه در یک Crate استفاده می‌کند. اطلاعات رجیسترها و قابلیت‌های تراشه‌ها در پروژه [ch32-data](https://github.com/ch32-rs/ch32-data) نگهداری می‌شود و از طریق Crate با نام `ch32-metapac` در دسترس است.
+
+> **وضعیت توسعه:** این پروژه در حال توسعه است. اگرچه برای آزمایش و توسعه Firmware قابل استفاده است، ممکن است هنوز برای همه کاربردهای تولیدی پایدار نباشد. وضعیت هر Peripheral و میزان اعتبارسنجی آن را در نسخه جاری بررسی کنید.
+
+## ویژگی‌های اصلی
+
+- پشتیبانی از چارچوب **Embassy** و برنامه‌نویسی ناهمگام مبتنی بر `async/await`.
+- پشتیبانی یکپارچه از چندین خانواده میکروکنترلر در یک HAL.
+- دسترسی به رجیسترهای Peripheral از طریق `ch32-metapac`.
+- درایورهای Blocking و Async و پشتیبانی از DMA در واحدهای جانبی منتخب.
+- امکان استفاده از ساختار نرم‌افزاری مشترک برای تراشه‌های پشتیبانی‌شده، با رعایت تفاوت‌های سخت‌افزاری هر مدل.
+
+## خانواده‌های تحت پوشش
+
+این مخزن خانواده‌هایی از جمله **CH32V2/V3، CH32V00x، CH32X0، CH32L1، CH641، CH643** و خانواده **CH32H4** را پوشش می‌دهد. خانواده CH32H4 شامل میکروکنترلر دو‌هسته‌ای **CH32H417** با هسته‌های **QingKe V3F و V5F** است.
+
+انتخاب تراشه از طریق Featureهای تعریف‌شده در فایل [Cargo.toml](Cargo.toml) انجام می‌شود. فهرست دقیق مدل‌ها، وضعیت پشتیبانی و قابلیت‌های هر Peripheral ممکن است در نسخه‌های مختلف تغییر کند؛ برای جزئیات به [ch32-data](https://github.com/ch32-rs/ch32-data) و جدول انگلیسی پایین صفحه مراجعه کنید.
+
+## واحدهای جانبی و درایورها
+
+درایورها، بسته به خانواده و مدل تراشه، شامل موارد زیر هستند:
+
+- **RCC و Clock Configuration**
+- **GPIO، EXTI و PIOC**
+- **UART، SPI و I2C**
+- **ADC، Timer و PWM**
+- **DMA و DMAMUX**
+- **IWDG و WWDG**
+- **USB Device، USB OTG FS، USB HS و USB SS**
+- **Ethernet و CAN** در مدل‌های پشتیبانی‌شده
+- درایورهای زمان و همگام‌سازی مورد نیاز **Embassy**
+
+وجود یک درایور در کد منبع به معنی پشتیبانی کامل یا اعتبارسنجی آن روی تمام تراشه‌ها نیست. علائم جدول قابلیت‌ها وضعیت مورد انتظار، پیاده‌سازی‌نشده یا آزمایش‌نشده را مشخص می‌کنند.
+
+## نکته مهم درباره CH32H417 دو‌هسته‌ای
+
+نمونه‌های دو‌هسته‌ای **CH32H417** در مسیر [examples/ch32h417](examples/ch32h417/) قرار دارند. این نمونه‌ها از دو Image مستقل برای هسته‌های **V3F** و **V5F** استفاده می‌کنند و ارتباط بین هسته‌ها از طریق Mailbox حافظه مشترک انجام می‌شود. ابزار `xtask` نیز برای پروگرام و گزارش‌گیری نمونه‌ها در نظر گرفته شده است.
+
+## نکته مهم: تنظیم تقسیم ROM/RAM در CH32V2/V3
+
+در خانواده‌های CH32V2 و CH32V3، تقسیم حافظه ROM/RAM قابل تنظیم است و مقدار آن در بیت `FLASH_OBR.RAM_CODE_MOD` نگهداری می‌شود. اگر برنامه بلافاصله پس از پروگرام متوقف شود یا خطای دسترسی حافظه مانند `Store/AMO access fault` رخ دهد، ممکن است تنظیم تقسیم حافظه تراشه با Linker Script هم‌خوانی نداشته باشد.
+
+برای بررسی و اصلاح این وضعیت، تنظیمات حافظه مورد انتظار را در تعریف تراشه در [ch32-data](https://github.com/ch32-rs/ch32-data) بررسی و در صورت نیاز با ابزار رسمی **WCHISPTool** پیکربندی کنید.
+
+## شروع کار و انتخاب تراشه
+
+1. مدل دقیق میکروکنترلر را مشخص کنید.
+2. Feature متناظر با همان تراشه را در `Cargo.toml` فعال کنید.
+3. Target مناسب معماری QingKe/RISC-V و تنظیمات حافظه را انتخاب کنید.
+4. وضعیت Peripheralهای مورد نیاز را در جدول پشتیبانی بررسی کنید.
+5. مثال‌های مرتبط را در پوشه [examples](examples/) مطالعه و روی سخت‌افزار هدف اعتبارسنجی کنید.
+
+برای جزئیات ساخت، Featureها، نسخه Rust، مثال‌ها، جدول کامل Peripheralها و موارد در دست توسعه، بخش انگلیسی همین README و فایل [Cargo.toml](Cargo.toml) را نیز مطالعه کنید.
+
+## منابع مرتبط
+
+- [مخزن ch32-hal در سازمان MES](https://github.com/MEMAR-ELECTRONIC-SANAT/ch32-hal)
+- [پروژه ch32-rs/ch32-data](https://github.com/ch32-rs/ch32-data)
+- [چارچوب Embassy](https://github.com/embassy-rs/embassy)
+- [مستندات و منابع CH32 در سازمان MES](https://github.com/MEMAR-ELECTRONIC-SANAT)
+
+</div>
+
+---
+
 # ch32-hal
 
 [![Demo Code Github Actions][badge-actions]][actions-build]
@@ -147,3 +224,33 @@ All kinds of contributions are welcome.
 ## License
 
 This project is licensed under the MIT or Apache-2.0 license, at your option.
+
+
+---
+
+## تصاویر و دیاگرام‌های راهنما
+
+<p align="center"><img src="Images/GitHub-Assets/MES-Section-Header.svg" width="100%" alt="MES Section Header"></p>
+
+فایل‌های SVG متحرک و گرافیکی هویت بصری MES در پوشه [Images/GitHub-Assets](Images/GitHub-Assets/) قرار دارند:
+
+| فایل | کاربرد |
+|---|---|
+| [MES-Hero-Banner.svg](Images/GitHub-Assets/MES-Hero-Banner.svg) | سربرگ اصلی README |
+| [MES-Divider.svg](Images/GitHub-Assets/MES-Divider.svg) | جداکننده بخش‌ها |
+| [MES-Section-Header.svg](Images/GitHub-Assets/MES-Section-Header.svg) | عنوان بصری بخش‌ها |
+| [MES-Project-Card.svg](Images/GitHub-Assets/MES-Project-Card.svg) | معرفی پروژه |
+| [MES-Status-Strip.svg](Images/GitHub-Assets/MES-Status-Strip.svg) | نوار وضعیت و منابع |
+| [MES-Thank-You-Footer.svg](Images/GitHub-Assets/MES-Thank-You-Footer.svg) | تصویر پایانی |
+
+<p align="center"><img src="Images/GitHub-Assets/MES-Thank-You-Footer.svg" width="100%" alt="MES Thank You Footer"></p>
+
+## تهیه و تدوین
+
+**معمار الکترونیک صنعت / MEMAR ELECTRONIC SANAT (MES)**
+
+همراه شما در مسیر طراحی و ساخت مدارهای مطمئن
+
+- [Telegram](https://t.me/Memar_Electronic)
+- [Instagram](https://www.instagram.com/Memar.Electronic)
+- [مشاهده سایر آموزش‌ها](https://github.com/MEMAR-ELECTRONIC-SANAT)
