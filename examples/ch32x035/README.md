@@ -30,3 +30,5 @@ consequences the example handles:
 `release_swd_pins: true` in the `Config` frees the RVSWD pins for the PIOC.
 The debugger cannot attach afterwards, so reset the chip into its system
 bootloader to program it again.
+
+![MES Animated Logo](../../Images/GitHub-Assets/MES_Animated_Logo_640x480.svg)
