@@ -19,7 +19,6 @@ Link: [OSHWHUB](https://oshwhub.com/andelf/linedog)
 
 ### LineDog v2 CH32V003F4P6 Board
 
-
 - BUZZ: PC4 (TIM1CH4)
 - WS2812: PA2
 
@@ -48,3 +47,5 @@ You might need to install the sources for core with `rustup component add rust-s
 - Edit the [`.cargo/config.toml`](.cargo/config.toml) file so the runner is `probe-rs run --chip ch32v003`.
 
 - Build and run the [blinky](src/bin/blinky.rs) example with `cargo run --release --bin blinky`.
+
+![MES Animated Logo](../../Images/GitHub-Assets/MES_Animated_Logo_640x480.svg)
