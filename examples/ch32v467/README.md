@@ -1008,3 +1008,5 @@ have been corrected. Current hardware results supersede the earlier untested sta
 - The installed PATH tool now supports V467. After installation, target
   lookup and `info --verbose --protocol jtag` both passed.
 - No on-board RTT testing or flashing has been performed by the agent.
+
+![MES Animated Logo](../../Images/GitHub-Assets/MES_Animated_Logo_640x480.svg)
