@@ -301,4 +301,6 @@ or an earlier stage means the file-system operation did not complete. The
 FAT16/FAT32 example requires a FAT16/FAT32 partition; the exFAT example does
 not format the card.
 
-![MES Animated Logo](../../Images/GitHub-Assets/MES_Animated_Logo_640x480.svg)
+<p align="center">
+  <img src="../../Images/GitHub-Assets/MES_Animated_Logo_640x480.svg" width="140" alt="MES Animated Logo">
+</p>
