@@ -1,4 +1,3 @@
-# .github
 
 <div dir="rtl" align="right">
 
