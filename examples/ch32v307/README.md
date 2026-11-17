@@ -68,4 +68,6 @@ back on the IN endpoint. A host using libusb (macOS or Linux both support interr
 transfers) can send 64-byte, short and zero-length packets and compare the echo; this
 exercises the interrupt arm/ready path, NAK flow control and the hardware toggle handling.
 
-![MES Animated Logo](../../Images/GitHub-Assets/MES_Animated_Logo_640x480.svg)
+<p align="center">
+  <img src="../../Images/GitHub-Assets/MES_Animated_Logo_640x480.svg" width="140" alt="MES Animated Logo">
+</p>
