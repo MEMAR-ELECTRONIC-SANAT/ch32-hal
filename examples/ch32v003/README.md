@@ -62,6 +62,91 @@ You might need to install the sources for core with `rustup component add rust-s
 
 - Build and run the [blinky](src/bin/blinky.rs) example with `cargo run --release --bin blinky`.
 
+<div dir="rtl" align="right">
+
+## معرفی و راهنمای نمونه‌برنامه‌های CH32V003
+
+این پوشه مجموعه‌ای از نمونه‌برنامه‌ها و پروژه‌های آزمایشی برای میکروکنترلر **CH32V003** است که با کتابخانه Rust به نام `ch32-hal` توسعه داده شده‌اند. اطلاعات بردهای پشتیبانی‌شده، تخصیص پایه‌ها و روش‌های کامپایل و بارگذاری برنامه در ادامه آمده است.
+
+## بردهای پشتیبانی‌شده
+
+### nanoCH32V003
+
+- میکروکنترلر: `CH32V003F4U6`
+- پایه LED: `PD6`
+- صفحه و اطلاعات برد: [wuxx/nanoCH32V003](https://github.com/wuxx/nanoCH32V003)
+
+### LineDog CH32V003J4M6
+
+- صفحه معرفی و طراحی برد: [OSHWHUB – LineDog](https://oshwhub.com/andelf/linedog)
+- میکروکنترلر: `CH32V003J4M6`
+- پایه‌های LED: `PA2` و `PC4`
+- این برد از کریستال خارجی پرسرعت (HSE) استفاده نمی‌کند.
+
+### LineDog v2 CH32V003F4P6
+
+- خروجی بازر: پایه `PC4` با عملکرد جایگزین `TIM1CH4`
+- اتصال LEDهای آدرس‌پذیر: پایه `PA2` برای `WS2812`
+
+توجه کنید تخصیص پایه‌ها و تجهیزات جانبی ممکن است بین نسخه‌های مختلف برد تفاوت داشته باشد؛ پیش از اتصال سخت‌افزار، شماتیک همان نسخه را بررسی کنید.
+
+## آماده‌سازی محیط کامپایل
+
+برای ساخت این پروژه باید از نسخه آزمایشی Rust یعنی `nightly` استفاده شود. ابتدا آن را نصب و برای پوشه پروژه فعال کنید:
+
+```bash
+rustup install nightly
+rustup override set nightly
+```
+
+پیکربندی هدف کامپایل در فایل [`riscv32ec-unknown-none-elf.json`](riscv32ec-unknown-none-elf.json) قرار دارد. این مشخصات امکان کامپایل برای معماری `riscv32ec` را فراهم می‌کند و افزونه `xwchc` را نیز فعال می‌سازد. این افزونه دستورهای فشرده بارگذاری و ذخیره‌سازی بایت و نیم‌کلمه مخصوص WCH را فعال می‌کند. هسته `QingKe V2A` از این قابلیت پشتیبانی می‌کند؛ برای جزئیات به جدول ۱-۱ راهنمای هسته `QingKe V3` مراجعه کنید.
+
+در صورت نیاز، کد منبع کتابخانه استاندارد `core` را نیز نصب کنید:
+
+```bash
+rustup component add rust-src
+```
+
+## ساخت و اجرای نمونه‌ها با wlink
+
+ابزار [`wlink`](https://github.com/ch32-rs/wlink) یکی از روش‌های بارگذاری و اجرای برنامه روی میکروکنترلرهای WCH است.
+
+1. ابزار را طبق [راهنمای نصب wlink](https://github.com/ch32-rs/wlink?tab=readme-ov-file#install) نصب کنید.
+2. فایل [`.cargo/config.toml`](.cargo/config.toml) را باز کرده و مقدار runner را روی `wlink` قرار دهید. در برخی نسخه‌های پروژه این تنظیم از قبل به‌عنوان runner پیش‌فرض تعریف شده است.
+3. نمونه چشمک‌زن LED با نام `blinky` را کامپایل و اجرا کنید:
+
+```bash
+cargo run --release --bin blinky
+```
+
+## ساخت و اجرای نمونه‌ها با probe-rs
+
+روش دیگر استفاده از [`probe-rs`](https://probe.rs/) است.
+
+1. ابزار را از [راهنمای رسمی نصب probe-rs](https://probe.rs/docs/getting-started/installation/) نصب کنید.
+2. در سیستم‌عامل‌های مبتنی بر Linux ممکن است لازم باشد قوانین `udev` را اضافه کنید تا ابزار `probe-rs` اجازه دسترسی به دیباگر `WCH-Link` را داشته باشد. راهنما: [قوانین udev در Linux](https://probe.rs/docs/getting-started/probe-setup/#linux%3A-udev-rules).
+3. فایل [`.cargo/config.toml`](.cargo/config.toml) را ویرایش کنید و runner را به شکل زیر تنظیم کنید:
+
+```toml
+runner = "probe-rs run --chip ch32v003"
+```
+
+4. نمونه `blinky` را بسازید و اجرا کنید:
+
+```bash
+cargo run --release --bin blinky
+```
+
+## نکات اجرایی
+
+- برای ساخت پروژه از دستورهای داخل پوشه مخزن و با نسخه `nightly` استفاده کنید.
+- روش بارگذاری انتخاب‌شده باید با مقدار runner در `.cargo/config.toml` هماهنگ باشد.
+- برای نمونه `probe-rs`، شناسه تراشه باید `ch32v003` تعیین شود.
+- پایه LED در هر برد یکسان نیست؛ برای نمونه، در nanoCH32V003 پایه `PD6` و در LineDog پایه‌های `PA2` و `PC4` معرفی شده‌اند.
+
+</div>
+
+
 ---
 
 ## تصاویر و دیاگرام‌های راهنما
