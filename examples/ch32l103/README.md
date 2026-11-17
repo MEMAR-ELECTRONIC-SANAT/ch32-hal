@@ -2,7 +2,16 @@
 
 ## معرفی پوشه
 
-نمونه‌برنامه‌ها و پروژه‌های آزمایشی برای میکروکنترلر CH32L103 با استفاده از کتابخانه ch32-hal.
+این پوشه شامل نمونه‌برنامه‌ها و پروژه‌های آزمایشی برای میکروکنترلر **CH32L103** بر پایه کتابخانه **ch32-hal** است.
+
+## برد توسعه
+
+### CH32L103C8T6-EVT-R0
+
+این برد، برد ارزیابی میکروکنترلر CH32L103C8T6 است.
+
+- **اتصال LED:** برای استفاده از LED در نمونه‌برنامه‌ها باید با یک سیم جامپر، پایه LED روی برد را به یکی از پایه‌های GPIO متصل کنید.
+- **نکته پیکربندی:** پایه GPIO انتخاب‌شده باید در برنامه به‌صورت خروجی تنظیم شود. شماره پایه و وضعیت فعال LED را با شماتیک یا مستندات برد تطبیق دهید؛ در این توضیح پایه مشخصی برای LED تعیین نشده است.
 
 </div>
 
@@ -28,6 +37,8 @@ CH32L103C8T6-EVT-R0
 
 ## تهیه و تدوین
 
+<div dir="rtl" align="right">
+
 **معمار الکترونیک صنعت | MEMAR ELECTRONIC SANAT (MES)**  
 همراه شما در مسیر طراحی و ساخت مدارهای مطمئن
 
@@ -35,4 +46,18 @@ CH32L103C8T6-EVT-R0
 - [Instagram](https://www.instagram.com/Memar.Electronic)
 - [مشاهده سایر آموزش‌ها و پروژه‌ها در GitHub](https://github.com/MEMAR-ELECTRONIC-SANAT)
 
-<p align="center"><img src="../../Images/GitHub-Assets/MES_Animated_Logo_640x480.svg" width="140" alt="MES Animated Logo"></p>
+</div>
+
+<div dir="ltr" align="left">
+
+**Prepared and Maintained By**  
+MEMAR ELECTRONIC SANAT (MES)  
+Reliable circuit design and development, alongside you.
+
+- [Telegram](https://t.me/Memar_Electronic)
+- [Instagram](https://www.instagram.com/Memar.Electronic)
+- [Explore more tutorials and projects on GitHub](https://github.com/MEMAR-ELECTRONIC-SANAT)
+
+</div>
+
+<p align="center"><img src="../../Images/GitHub-Assets/MES_Animated_Logo_640x480.svg" width="180" alt="MES Animated Logo"></p>
