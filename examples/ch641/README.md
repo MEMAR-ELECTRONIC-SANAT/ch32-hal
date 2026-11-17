@@ -27,4 +27,6 @@ Link: <https://oshwhub.com/andelf/dino-board>
 
 [`riscv32ec-unknown-none-elf.json`](riscv32ec-unknown-none-elf.json) enables `xwchc`, WCH's compressed byte and halfword loads and stores. QingKe V2A implements the extension (QingKe V3 manual, table 1-1).
 
-![MES Animated Logo](../../Images/GitHub-Assets/MES_Animated_Logo_640x480.svg)
+<p align="center">
+  <img src="../../Images/GitHub-Assets/MES_Animated_Logo_640x480.svg" width="140" alt="MES Animated Logo">
+</p>
