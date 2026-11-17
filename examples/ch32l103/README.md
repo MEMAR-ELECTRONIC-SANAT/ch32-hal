@@ -2,13 +2,13 @@
 
 ## معرفی پوشه
 
-نمونه‌برنامه‌ها و پروژه‌های آزمایشی برای میکروکنترلر CH32L10 با استفاده از ch32-hal.
+نمونه‌برنامه‌ها و پروژه‌های آزمایشی برای میکروکنترلر CH32L103 با استفاده از کتابخانه ch32-hal.
 
 </div>
 
 ## Folder Overview
 
-Example applications and test projects for CH32L10 using ch32-hal.
+Example applications and test projects for the CH32L103 microcontroller using ch32-hal.
 
 ---
 

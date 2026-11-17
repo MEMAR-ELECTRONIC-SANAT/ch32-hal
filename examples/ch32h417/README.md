@@ -2,13 +2,13 @@
 
 ## معرفی پوشه
 
-نمونه‌برنامه‌ها و پروژه‌های آزمایشی برای میکروکنترلر CH32H41 با استفاده از ch32-hal.
+نمونه‌های CH32H417 دو‌هسته‌ای شامل Firmware هسته‌های V3F و V5F، ارتباط بین‌هسته‌ای (IPC)، ابزار xtask و آزمون Peripheralها.
 
 </div>
 
 ## Folder Overview
 
-Example applications and test projects for CH32H41 using ch32-hal.
+Dual-core CH32H417 examples covering V3F/V5F firmware, inter-core communication (IPC), xtask utilities, and peripheral tests.
 
 ---
 

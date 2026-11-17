@@ -2,13 +2,13 @@
 
 ## معرفی پوشه
 
-نمونه‌برنامه‌ها و پروژه‌های آزمایشی برای میکروکنترلر CH64 با استفاده از ch32-hal.
+نمونه‌برنامه‌ها و پروژه‌های آزمایشی برای میکروکنترلر CH641 با استفاده از کتابخانه ch32-hal.
 
 </div>
 
 ## Folder Overview
 
-Example applications and test projects for CH64 using ch32-hal.
+Example applications and test projects for the CH641 microcontroller using ch32-hal.
 
 ---
 

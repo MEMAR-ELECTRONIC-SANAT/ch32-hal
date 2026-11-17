@@ -2,13 +2,13 @@
 
 ## معرفی پوشه
 
-نمونه‌برنامه‌ها و پروژه‌های آزمایشی برای میکروکنترلر CH32V46 با استفاده از ch32-hal.
+نمونه‌برنامه‌ها و پروژه‌های آزمایشی برای میکروکنترلر CH32V467 با استفاده از کتابخانه ch32-hal.
 
 </div>
 
 ## Folder Overview
 
-Example applications and test projects for CH32V46 using ch32-hal.
+Example applications and test projects for the CH32V467 microcontroller using ch32-hal.
 
 ---
 

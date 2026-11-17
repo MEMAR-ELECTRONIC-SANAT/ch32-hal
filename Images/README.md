@@ -39,7 +39,7 @@ Images, diagrams, and graphical assets used by the repository documentation.
 
 ## تصاویر و دیاگرام‌های راهنما
 
-<p align="center"><img src="../Images/GitHub-Assets/MES-Section-Header.svg" width="70%" alt="MES Section Header"></p>
+<p align="center"><img src="GitHub-Assets/MES-Section-Header.svg" width="70%" alt="MES Section Header"></p>
 
 ## تهیه و تدوین
 
@@ -50,4 +50,4 @@ Images, diagrams, and graphical assets used by the repository documentation.
 - [Instagram](https://www.instagram.com/Memar.Electronic)
 - [مشاهده سایر آموزش‌ها و پروژه‌ها در GitHub](https://github.com/MEMAR-ELECTRONIC-SANAT)
 
-<p align="center"><img src="../Images/GitHub-Assets/MES_Animated_Logo_640x480.svg" width="140" alt="MES Animated Logo"></p>
+<p align="center"><img src="GitHub-Assets/MES_Animated_Logo_640x480.svg" width="140" alt="MES Animated Logo"></p>
