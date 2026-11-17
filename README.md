@@ -348,6 +348,8 @@ The visual identity assets for MES are stored in [Images/GitHub-Assets](Images/G
 
 </div>
 
+<div dir="rtl" align="right">
+
 ## تصاویر و دیاگرام‌های راهنما
 
 <p align="center"><img src="Images/GitHub-Assets/MES-Section-Header.svg" width="100%" alt="عنوان بخش تصاویر و دیاگرام‌های MES"></p>
