@@ -6,6 +6,8 @@
 
 </div>
 
+<div dir="rtl" align="right">
+
 ## راهنمای فارسی
 
 # نمونه‌های CH32H417
@@ -179,6 +181,8 @@ cargo xtask report --example sdio_exfat
 در هر یک از دو نمونه، مقادیر `stage = 7`، `error = 0` و `bytes verified = 1300` نشان‌دهنده موفقیت هستند. مقدار `test file number = 1` به معنی ایجاد فایل `H4TST01.TXT` است. مقدار خطای غیرصفر یا توقف در مرحله‌ای پیش از ۷ به معنی کامل نشدن عملیات فایل‌سیستم است. نمونه FAT به پارتیشن FAT16/FAT32 نیاز دارد و نمونه exFAT کارت را فرمت نمی‌کند.
 
 ---
+
+</div>
 
 ## Folder Overview
 
