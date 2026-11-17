@@ -281,4 +281,6 @@ The animated SVG assets used for MES visual identity are stored in [Images/GitHu
 - [Instagram](https://www.instagram.com/Memar.Electronic)
 - [مشاهده سایر آموزش‌ها](https://github.com/MEMAR-ELECTRONIC-SANAT)
 
-![MES Animated Logo](Images/GitHub-Assets/MES_Animated_Logo_640x480.svg)
+<p align="center">
+  <img src="Images/GitHub-Assets/MES_Animated_Logo_640x480.svg" width="140" alt="MES Animated Logo">
+</p>
