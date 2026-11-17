@@ -1,7 +1,3 @@
-<p align="center">
-
-</p>
-
 <div dir="rtl" align="right">
 
 <p align="center"><img src="Images/GitHub-Assets/MES-Hero-Banner.svg" width="100%" alt="معمار الکترونیک صنعت - MES"></p>
@@ -10,6 +6,8 @@
 
 # کتابخانه HAL برای میکروکنترلرهای ۳۲ بیتی WCH | ch32-hal
 
+<p align="center"><img src="Images/GitHub-Assets/MES-Section-Header.svg" width="100%" alt="عنوان بخش MES"></p>
+
 ## معرفی
 
 مخزن **ch32-hal** یک کتابخانه **Hardware Abstraction Layer (HAL)** مبتنی بر زبان **Rust** برای میکروکنترلرهای ۳۲ بیتی **RISC-V** شرکت **WCH** است. این HAL با چارچوب ناهمگام [Embassy](https://github.com/embassy-rs/embassy) یکپارچه شده و دسترسی یکپارچه‌ای به واحدهای جانبی خانواده‌های مختلف CH32 ارائه می‌کند.
@@ -17,6 +15,8 @@
 این پروژه از روش **metapac** برای پشتیبانی چندین تراشه در یک Crate استفاده می‌کند. اطلاعات رجیسترها و قابلیت‌های تراشه‌ها در پروژه [ch32-data](https://github.com/ch32-rs/ch32-data) نگهداری می‌شود و از طریق Crate با نام `ch32-metapac` در دسترس است.
 
 > **وضعیت توسعه:** این پروژه در حال توسعه است. اگرچه برای آزمایش و توسعه Firmware قابل استفاده است، ممکن است هنوز برای همه کاربردهای تولیدی پایدار نباشد. وضعیت هر Peripheral و میزان اعتبارسنجی آن را در نسخه جاری بررسی کنید.
+
+<p align="center"><img src="Images/GitHub-Assets/MES-Status-Strip.svg" width="100%" alt="وضعیت و منابع پروژه MES"></p>
 
 ## ویژگی‌های اصلی
 
@@ -121,6 +121,8 @@
 - موارد توسعه باقی‌مانده شامل PLL2 برای CH32V3 و DMA2 برای CH32V3 است؛ DMA2 به مدیریت ویژه کانال‌های DMA با شماره بالا نیاز دارد.
 - پشتیبانی از تراشه‌های جدید CH645 با USB HUB و SerDes خانواده V4C و CH564 با USBHS و Ethernet صد مگابیتی خانواده V4J به مشارکت توسعه‌دهندگان نیاز دارد.
 
+<p align="center"><img src="Images/GitHub-Assets/MES-Project-Card.svg" width="100%" alt="معرفی پروژه‌های مبتنی بر ch32-hal"></p>
+
 ## پروژه‌های ساخته‌شده با ch32-hal
 
 نمونه‌ای از پروژه‌های مبتنی بر این کتابخانه، [Hackoween 2024 badge](https://github.com/rappet/hackoween-badge) است. اگر پروژه‌ای با این HAL ساخته‌اید، می‌توانید آن را در بخش [Discussions](https://github.com/ch32-rs/ch32-hal/discussions) معرفی کنید؛ پروژه‌های متن‌باز می‌توانند برای اضافه‌شدن به این فهرست پیشنهاد شوند.
@@ -147,6 +149,8 @@
 </div>
 
 ---
+
+<div dir="ltr" align="left">
 
 # ch32-hal
 
@@ -312,33 +316,55 @@ This project is licensed under the MIT or Apache-2.0 license, at your option.
 
 ## Images and Reference Diagrams
 
-The animated SVG assets used for MES visual identity are stored in [Images/GitHub-Assets](Images/GitHub-Assets/).
+<p align="center"><img src="Images/GitHub-Assets/MES-Section-Header.svg" width="100%" alt="MES Section Header"></p>
+
+The visual identity assets for MES are stored in [Images/GitHub-Assets](Images/GitHub-Assets/). These self-contained SVG graphics can be embedded in GitHub README files using HTML `img` elements. Animation support may vary depending on the browser and GitHub rendering context.
 
 | File | Purpose |
 |---|---|
-| [MES-Hero-Banner.svg](Images/GitHub-Assets/MES-Hero-Banner.svg) | Main README banner |
-| [MES-Divider.svg](Images/GitHub-Assets/MES-Divider.svg) | Section divider |
-| [MES-Section-Header.svg](Images/GitHub-Assets/MES-Section-Header.svg) | Visual section heading |
-| [MES-Project-Card.svg](Images/GitHub-Assets/MES-Project-Card.svg) | Project showcase |
-| [MES-Status-Strip.svg](Images/GitHub-Assets/MES-Status-Strip.svg) | Status and resource strip |
-| [MES-Thank-You-Footer.svg](Images/GitHub-Assets/MES-Thank-You-Footer.svg) | README footer artwork |
+| [MES-Hero-Banner.svg](Images/GitHub-Assets/MES-Hero-Banner.svg) | Main README or profile banner |
+| [MES-Divider.svg](Images/GitHub-Assets/MES-Divider.svg) | Horizontal divider between sections |
+| [MES-Section-Header.svg](Images/GitHub-Assets/MES-Section-Header.svg) | Visual heading for important sections |
+| [MES-Project-Card.svg](Images/GitHub-Assets/MES-Project-Card.svg) | Project introduction and showcase |
+| [MES-Status-Strip.svg](Images/GitHub-Assets/MES-Status-Strip.svg) | Project status and resource strip |
+| [MES-Thank-You-Footer.svg](Images/GitHub-Assets/MES-Thank-You-Footer.svg) | Closing artwork at the end of a README |
+| [MES_Animated_Logo_640x480.svg](Images/GitHub-Assets/MES_Animated_Logo_640x480.svg) | Animated MES logo |
+
+<p align="center"><img src="Images/GitHub-Assets/MES-Thank-You-Footer.svg" width="100%" alt="MES Thank You Footer"></p>
+
+## Prepared and Maintained By
+
+**MEMAR ELECTRONIC SANAT (MES)**
+
+*Your partner in designing and building reliable circuits.*
+
+- [Telegram](https://t.me/Memar_Electronic)
+- [Instagram](https://www.instagram.com/Memar.Electronic)
+- [Explore more tutorials and projects](https://github.com/MEMAR-ELECTRONIC-SANAT)
+
+<p align="center">
+  <img src="Images/GitHub-Assets/MES_Animated_Logo_640x480.svg" width="180" alt="MES Animated Logo">
+</p>
+
+</div>
 
 ## تصاویر و دیاگرام‌های راهنما
 
-<p align="center"><img src="Images/GitHub-Assets/MES-Section-Header.svg" width="100%" alt="MES Section Header"></p>
+<p align="center"><img src="Images/GitHub-Assets/MES-Section-Header.svg" width="100%" alt="عنوان بخش تصاویر و دیاگرام‌های MES"></p>
 
-فایل‌های SVG متحرک و گرافیکی هویت بصری MES در پوشه [Images/GitHub-Assets](Images/GitHub-Assets/) قرار دارند:
+فایل‌های گرافیکی و SVG متحرک هویت بصری MES در پوشه [Images/GitHub-Assets](Images/GitHub-Assets/) نگهداری می‌شوند. این فایل‌ها برای استفاده در README مخازن و معرفی پروژه‌ها طراحی شده‌اند و می‌توان آن‌ها را با تگ HTML یعنی `img` در GitHub نمایش داد. نمایش انیمیشن ممکن است با توجه به مرورگر و محیط نمایش GitHub متفاوت باشد.
 
 | فایل | کاربرد |
 |---|---|
-| [MES-Hero-Banner.svg](Images/GitHub-Assets/MES-Hero-Banner.svg) | سربرگ اصلی README |
-| [MES-Divider.svg](Images/GitHub-Assets/MES-Divider.svg) | جداکننده بخش‌ها |
-| [MES-Section-Header.svg](Images/GitHub-Assets/MES-Section-Header.svg) | عنوان بصری بخش‌ها |
-| [MES-Project-Card.svg](Images/GitHub-Assets/MES-Project-Card.svg) | معرفی پروژه |
-| [MES-Status-Strip.svg](Images/GitHub-Assets/MES-Status-Strip.svg) | نوار وضعیت و منابع |
-| [MES-Thank-You-Footer.svg](Images/GitHub-Assets/MES-Thank-You-Footer.svg) | تصویر پایانی |
+| [MES-Hero-Banner.svg](Images/GitHub-Assets/MES-Hero-Banner.svg) | سربرگ اصلی README یا پروفایل |
+| [MES-Divider.svg](Images/GitHub-Assets/MES-Divider.svg) | جداکننده افقی میان بخش‌ها |
+| [MES-Section-Header.svg](Images/GitHub-Assets/MES-Section-Header.svg) | عنوان بصری بخش‌های مهم |
+| [MES-Project-Card.svg](Images/GitHub-Assets/MES-Project-Card.svg) | معرفی و نمایش پروژه |
+| [MES-Status-Strip.svg](Images/GitHub-Assets/MES-Status-Strip.svg) | نوار وضعیت پروژه و منابع |
+| [MES-Thank-You-Footer.svg](Images/GitHub-Assets/MES-Thank-You-Footer.svg) | تصویر پایانی README |
+| [MES_Animated_Logo_640x480.svg](Images/GitHub-Assets/MES_Animated_Logo_640x480.svg) | لوگوی متحرک MES |
 
-<p align="center"><img src="Images/GitHub-Assets/MES-Thank-You-Footer.svg" width="100%" alt="MES Thank You Footer"></p>
+<p align="center"><img src="Images/GitHub-Assets/MES-Thank-You-Footer.svg" width="100%" alt="پایان‌بندی MES"></p>
 
 ## تهیه و تدوین
 
@@ -351,5 +377,7 @@ The animated SVG assets used for MES visual identity are stored in [Images/GitHu
 - [مشاهده سایر آموزش‌ها](https://github.com/MEMAR-ELECTRONIC-SANAT)
 
 <p align="center">
-  <img src="Images/GitHub-Assets/MES_Animated_Logo_640x480.svg" width="140" alt="MES Animated Logo">
+  <img src="Images/GitHub-Assets/MES_Animated_Logo_640x480.svg" width="180" alt="MES Animated Logo">
 </p>
+
+</div>
