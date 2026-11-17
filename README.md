@@ -166,9 +166,9 @@ Rust HAL(Hardware Abstraction Layer) crate for WCH's 32-bit RISC-V microcontroll
 > it may not be fully stable for production environments.
 > We welcome user feedback and encourage reporting any issues you encounter to help improve the hal crate.
 
-This HAL crates is the [Embassy](https://github.com/embassy-rs/embassy) framework driver for WCH's 32-bit RISC-V microcontrollers.
+This HAL crate provides an [Embassy](https://github.com/embassy-rs/embassy)-compatible driver implementation for WCH's 32-bit RISC-V microcontrollers.
 
-This HAL crates uses the metapac approach to support multiple chips in the same crate.
+This HAL crate uses the metapac approach to support multiple chips in a single crate.
 The metapac is maintained in the [ch32-rs/ch32-data](https://github.com/ch32-rs/ch32-data) repository, published as a crate `ch32-metapac`.
 
 Keypoints:
@@ -304,15 +304,15 @@ This project is licensed under the MIT or Apache-2.0 license, at your option.
 
 ---
 
-## Credits and Documentation
+## Upstream Projects and Credits
 
-**MEMAR ELECTRONIC SANAT (MES)**
+This repository builds on the work of the upstream **ch32-rs** project and its supporting ecosystem:
 
-*Your partner in designing and building reliable circuits.*
+- [ch32-rs/ch32-hal](https://github.com/ch32-rs/ch32-hal) — upstream HAL implementation and development history.
+- [ch32-rs/ch32-data](https://github.com/ch32-rs/ch32-data) — chip metadata, peripheral definitions, and register information used by `ch32-metapac`.
+- [Embassy](https://github.com/embassy-rs/embassy) — the asynchronous embedded framework integrated by this HAL.
 
-- [Telegram](https://t.me/Memar_Electronic)
-- [Instagram](https://www.instagram.com/Memar.Electronic)
-- [Explore more tutorials and projects](https://github.com/MEMAR-ELECTRONIC-SANAT)
+Please refer to the upstream repositories for original implementation details, development discussions, and contribution history.
 
 ## Images and Reference Diagrams
 
